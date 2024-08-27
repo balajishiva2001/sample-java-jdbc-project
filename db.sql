@@ -1,0 +1,1 @@
+insert Student(id,full_name,age) values (1,"AA",10),(2,"BB",20);
