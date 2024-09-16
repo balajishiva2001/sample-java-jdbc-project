@@ -50,6 +50,9 @@ public class App
     	
     	System.out.println("**************JDBC Connection****************");
     	
+    	/*
+    	 * Mysql | drop the table if exists
+    	 */
     	String query0 = "drop table if exists Student;";
     	System.out.println("Mysql | drop the table if exists");
     	try{
@@ -65,6 +68,9 @@ public class App
     		exception.printStackTrace();
 		}
     	
+    	/*
+    	 * Mysql | create the table
+    	 */
     	System.out.println();
     	String query1=
     			"""
@@ -83,6 +89,9 @@ public class App
     		exception.printStackTrace();
 		}
     	
+    	/*
+    	 * Mysql | Execute the db.sql
+    	 */
     	System.out.println();
     	System.out.println("Mysql | Execute the db.sql");
     	try {
@@ -97,7 +106,9 @@ public class App
     		exception.printStackTrace();
 		}
     	
-    	
+    	/*
+    	 * Mysql | select all records
+    	 */
     	String query2 = "select * from Student;";
     	System.out.println("Mysql | select all records");
     	try(Connection con = DriverManager.getConnection(url, userName, password);
@@ -111,6 +122,9 @@ public class App
     		exception.printStackTrace();
 		}
     	
+    	/*
+    	 * Mysql | select a record by id
+    	 */
     	System.out.println();
     	String query3 = "select * from Student where id = ?;";
     	System.out.println("Mysql | select a record by id");
@@ -128,7 +142,9 @@ public class App
     		exception.printStackTrace();
 		}
     	
-    	
+    	/*
+    	 * Mysql | Insert the records in Batch
+    	 */
     	System.out.println();
     	String query4 = "insert student(id,full_name,age) values (?,?,?);";
     	System.out.println("Mysql | Insert the records in Batch");
@@ -155,7 +171,9 @@ public class App
     		exception.printStackTrace();
 		}
     	
-    	
+    	/*
+    	 * Mysql | update a record by id
+    	 */
     	System.out.println();
     	String query5 = "update student set full_name = ? , age = ? where id = ?";
     	System.out.println("Mysql | update a record by id");
