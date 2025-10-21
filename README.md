@@ -37,36 +37,38 @@ Ensure you have the following installed:
 2️⃣ Clone the Repository
 
 Open your terminal or Git Bash and run:
-
+```bash
 git clone https://github.com/balajishiva2001/sample-java-jdbc-project.git  
 cd sample-java-jdbc-project  
+```
 
+---
 3️⃣ Configure Database
 
 - Create a new database in MySQL:
-
+```bash
 CREATE DATABASE sampledb;
-
+```
 - Run the provided `db.sql` script to set up the necessary table and initial data.
 
 4️⃣ Build the Project
 
 Use Maven to build the project:
-
+```bash
 mvn clean install
-
+```
 5️⃣ Run the Application
 
 Execute the Java application:
-
+```bash
 mvn exec:java
-
+```
 The application will interact with the MySQL database to perform CRUD operations.
 
 ---
 
 📂 Project Structure
-
+```
 sample-java-jdbc-project/  
 ├── src/  
 │   ├── main/  
@@ -75,6 +77,7 @@ sample-java-jdbc-project/
 ├── db.sql  
 ├── pom.xml  
 └── README.md  
+```
 
 ---
 
